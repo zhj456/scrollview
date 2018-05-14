@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "HeadV_TableviewVC.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +16,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    _window.backgroundColor=[UIColor whiteColor];
+    _window.frame=[UIScreen mainScreen].bounds;
+  
+    _window.rootViewController=[[UINavigationController alloc]initWithRootViewController:[HeadV_TableviewVC alloc]];
+    
+    [_window makeKeyAndVisible];
+    
+    
     return YES;
 }
 
